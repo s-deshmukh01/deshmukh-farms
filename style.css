@@ -1,0 +1,70 @@
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--green:#2f6b3b;--dark:#17351e;--light:#f4f7f1;--gold:#d7a93d;--text:#243128;--muted:#68746b;--white:#fff}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;color:var(--text);line-height:1.6;background:#fff}
+a{text-decoration:none;color:inherit}
+.container{width:min(1120px,92%);margin:auto}
+.site-header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);border-bottom:1px solid #e7ece6;backdrop-filter:blur(10px)}
+.nav{min-height:70px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:9px;font-size:1.1rem;font-weight:800;color:var(--dark)}
+.brand-mark{font-size:1.55rem}
+.menu{display:flex;gap:24px;font-weight:600;color:#445247}
+.menu a:hover{color:var(--green)}
+.menu-toggle{display:none;border:0;background:none;font-size:1.7rem;cursor:pointer;color:var(--dark)}
+.hero{background:linear-gradient(135deg,#edf5e9,#fff 60%);padding:90px 0 80px;overflow:hidden}
+.hero-content{display:grid;grid-template-columns:1.3fr .7fr;gap:50px;align-items:center}
+.eyebrow{text-transform:uppercase;letter-spacing:2px;font-size:.78rem;font-weight:800;color:var(--green);margin-bottom:10px}
+h1{font-size:clamp(2.5rem,7vw,5rem);line-height:1.05;color:var(--dark);margin-bottom:22px}
+h1 span{color:var(--green)}
+h2{font-size:clamp(1.8rem,4vw,3rem);line-height:1.15;color:var(--dark);margin-bottom:16px}
+h3{color:var(--dark);margin-bottom:7px}
+.hero-text{font-size:1.08rem;max-width:650px;color:#536057}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 19px;border-radius:10px;font-weight:800;min-height:48px}
+.primary{background:var(--green);color:white}
+.primary:hover{background:#24552e}
+.whatsapp{background:#1f9d55;color:#fff}
+.whatsapp:hover{background:#188447}
+.hero-card{background:var(--dark);color:#fff;border-radius:24px;padding:35px;box-shadow:0 18px 45px rgba(23,53,30,.18)}
+.hero-card h2{color:#fff;font-size:1.8rem}
+.hero-card p{color:#d9e4db}
+.hero-icon{font-size:4rem;margin-bottom:18px}
+.section{padding:85px 0}
+.alt{background:var(--light)}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
+.two-col p{color:var(--muted);margin-bottom:12px}
+.info-card{border:1px solid #e1e8df;border-radius:20px;padding:10px;background:#fff}
+.info-card div{padding:18px;border-bottom:1px solid #edf0ec;display:flex;flex-direction:column;gap:3px}
+.info-card div:last-child{border-bottom:0}
+.info-card span{color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
+.card{background:#fff;padding:28px;border-radius:18px;border:1px solid #e2e9e0}
+.card-icon{font-size:2.3rem;margin-bottom:15px}
+.card p,.muted{color:var(--muted)}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:25px}
+.photo{min-height:230px;border-radius:18px;background:linear-gradient(135deg,#dcebd6,#f8f5e9);display:flex;align-items:center;justify-content:center;flex-direction:column;font-size:3.2rem;color:var(--green);border:1px solid #e2e9e0}
+.photo span{font-size:.95rem;font-weight:700;color:#536057;margin-top:8px}
+.contact{background:var(--dark);color:#fff}
+.contact-box{display:flex;justify-content:space-between;align-items:center;gap:30px}
+.contact h2{color:#fff}
+.contact p{color:#d9e4db}
+footer{background:#102515;color:#b9c8bb;padding:24px 0}
+.footer-inner{display:flex;justify-content:space-between;gap:15px;font-size:.9rem}
+
+@media(max-width:760px){
+  .nav{min-height:62px}
+  .menu-toggle{display:block}
+  .menu{display:none;position:absolute;top:62px;left:0;right:0;background:#fff;border-bottom:1px solid #e7ece6;padding:12px 4%;flex-direction:column;gap:0}
+  .menu.open{display:flex}
+  .menu a{padding:13px 0;border-bottom:1px solid #f0f2ef}
+  .hero{padding:62px 0 55px}
+  .hero-content,.two-col{grid-template-columns:1fr;gap:30px}
+  .hero-card{padding:28px}
+  .section{padding:62px 0}
+  .cards,.gallery{grid-template-columns:1fr}
+  .photo{min-height:180px}
+  .contact-box{flex-direction:column;align-items:flex-start}
+  .actions{width:100%}
+  .btn{width:100%}
+  .footer-inner{flex-direction:column;text-align:center}
+}
